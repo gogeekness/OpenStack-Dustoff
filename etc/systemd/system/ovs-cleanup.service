@@ -1,0 +1,16 @@
+[Unit]
+Description=Clean stale OVS pidfiles
+Before=docker.service
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/rm -f /run/openvswitch/ovsdb-server.pid
+ExecStart=/bin/rm -f /run/openvswitch/ovs-vswitchd.pid
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+systemctl enable ovs-cleanup.service
