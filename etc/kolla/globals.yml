@@ -323,7 +323,7 @@ enable_cinder_backend_nfs: true
 #enable_cyborg: false
 #enable_designate: false
 #enable_destroy_images: false
-enable_etcd: true
+#enable_etcd: true
 #enable_fluentd: true
 #enable_fluentd_systemd: "{{ (enable_fluentd | bool) and (enable_central_logging | bool) }}"
 #enable_gnocchi: false
