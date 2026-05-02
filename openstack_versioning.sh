@@ -35,6 +35,7 @@ copy_file /etc/kolla/config/cinder/nfs_shares                           etc/koll
 copy_file /etc/kolla/config/horizon/custom_local_settings               etc/kolla/config/horizon/custom_local_settings
 
 # ── Network ──────────────────────────────────────────────────────────────────
+copy_file /etc/netplan/10-netcfg.yaml                                   etc/netplan/10-netcfg.yaml
 copy_file /etc/netplan/50-netcfg.yaml                                   etc/netplan/50-netcfg.yaml
 copy_file /etc/resolv.conf                                              etc/resolv.conf
 copy_file /etc/hosts                                                    etc/hosts
